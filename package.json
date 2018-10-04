@@ -1,7 +1,7 @@
 {
   "name": "@deps/debug",
   "version": "1.0.0",
-  "description": "Simple debug logger for Browser/Node.js. It supports TypeScript/ES modules.",
+  "description": "Simple debug logger for Browser/Node.js. Supports TypeScript/ES modules.",
   "keywords": [
     "debug",
     "log",
