@@ -15,5 +15,7 @@ const debug = createDebug({
  */
 export {
     debug,
+    // alias to debug
+    debug as debugLog,
     DEBUG_CONTROLLER
 };
