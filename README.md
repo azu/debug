@@ -72,6 +72,17 @@ DEBUG=-prefix:*
 DEBUG=-p1,p2,p3
 ```
 
+When you specify `DEBUG=prefix:*`, this library output log that is started with `prefix:`. 
+
+```ts
+import { debug } from "@deps/debug";
+
+debug("prefix:", "log text"):
+// => Output to console: "log text"
+debug("no output");
+// => No output
+```
+
 ### Browser
 
 Enable **DEBUG MODE** by `localStorage` API.
