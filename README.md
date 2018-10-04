@@ -78,7 +78,7 @@ When you specify `DEBUG=prefix:*`, this library output log that is started with 
 import { debug } from "@deps/debug";
 
 debug("prefix:", "log text"):
-// => Output to console: "log text"
+// => Output to console: "prefix: log text"
 debug("no output");
 // => No output
 ```
