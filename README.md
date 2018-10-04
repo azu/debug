@@ -9,6 +9,8 @@ Simple debug logger for Browser/Node.js.
 - Support ES modules `import`
 - Support Browser and Node.js
 
+This library is inspired by [visionmedia/debug](https://github.com/visionmedia/debug).
+
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
