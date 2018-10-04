@@ -21,7 +21,7 @@ Install with [npm](https://www.npmjs.com/):
 
 ### API
 
-This library provide `debug` that is a function.
+This library provide a `debug` function.
 
 This `debug` function output to console if **DEBUG MODE** is enabled.
 
@@ -31,6 +31,22 @@ import { debug } from "@deps/debug";
 debug("log text"):
 // => Output to console: "log text"
 ```
+
+:bulb: Tips:
+
+`@deps/debug` also provide `debug` function as `debugLog`.
+`debugLog` is a just alias to `debug` function.
+
+You can use `debugLog` to avoid conflict naming with Node.js's `utils`, [visionmedia/debug](https://github.com/visionmedia/debug), or other modules.
+
+```ts
+import { debugLog } from "@deps/debug";
+
+debugLog("log text"):
+// => Output to console: "log text"
+```
+
+
 
 ## Enable **DEBUG MODE**
 
@@ -77,6 +93,13 @@ import { DEBUG_CONTROLLER } from "@deps/debug"
 DEBUG_CONTROLLER.disable();
 // Start logging(by default)
 DEBUG_CONTROLLER.enable();
+```
+
+Also you can force enable. This ignore `-prefix` pattern.
+
+```ts
+import { DEBUG_CONTROLLER } from "@deps/debug"
+DEBUG_CONTROLLER.forceEnable();
 ```
 
 ## Changelog
