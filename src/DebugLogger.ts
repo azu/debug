@@ -65,7 +65,7 @@ export function createDebug(options: DebugOptions): (message?: any, ...optionalP
     }
     return function debugLog(message?: any, ...optionalParams: any[]): void {
         // Force stop to output
-        if (!global_debug_status) {
+        if (global_debug_status === "ng") {
             return;
         }
         if (!allowOutputConsole(message, allowNameList, denyNameList)) {

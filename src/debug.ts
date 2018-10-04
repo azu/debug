@@ -1,8 +1,13 @@
 import { createDebug } from "./DebugLogger";
 import { DEBUG_CONTROLLER } from "./DebugController";
 
+/**
+ * detect node --require
+ * https://github.com/pinojs/pino-debug/blob/bd9adfd80e2106ff6270ed79974a327fe9aa89ea/index.js#L9
+ */
+const isRequired = module.parent && module.parent.parent === null && module.parent.filename === null;
 const debug = createDebug({
-    namespaces: process.env.DEBUG,
+    namespaces: isRequired ? "*" : process.env.DEBUG,
     console: console
 });
 /**
