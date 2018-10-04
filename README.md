@@ -109,3 +109,8 @@ For bugs and feature requests, [please create an issue](https://github.com/azu/d
 ## License
 
 MIT © azu
+
+Some codes are copied from following:
+
+- [visionmedia/debug](https://github.com/visionmedia/debug)
+    - Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
