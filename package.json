@@ -1,0 +1,74 @@
+{
+  "name": "@deps/debug",
+  "version": "1.0.0",
+  "description": "Simple debug logger for Browser/Node.js. It supports TypeScript/ES modules.",
+  "keywords": [
+    "debug",
+    "log",
+    "logger",
+    "typescript"
+  ],
+  "homepage": "https://github.com/azu/debug",
+  "bugs": {
+    "url": "https://github.com/azu/debug/issues"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/debug.js",
+  "types": "lib/debug.d.ts",
+  "browser": "lib/browser.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/debug.git"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tsc -p .",
+    "clean": "rimraf lib/",
+    "prepublish": "npm run --if-present build",
+    "test": "mocha \"test/**/*.ts\"",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "watch": "tsc -p . --watch"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.11.4",
+    "consolemock": "^1.1.0",
+    "cross-env": "^5.2.0",
+    "husky": "^1.1.0",
+    "lint-staged": "^7.3.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.14.3",
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.1",
+    "ts-node-test-register": "^4.0.0",
+    "typescript": "^3.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
