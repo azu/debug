@@ -1,4 +1,4 @@
-# @deps/debug
+# @deps/debug [![Build Status](https://travis-ci.org/azu/debug.svg?branch=master)](https://travis-ci.org/azu/debug)
 
 Simple debug logger for Browser/Node.js.
 
