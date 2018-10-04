@@ -79,7 +79,7 @@ import { debug } from "@deps/debug";
 
 debug("prefix:", "log text"):
 // => Output to console: "prefix: log text"
-debug("no output");
+debug("log text");
 // => No output
 ```
 
