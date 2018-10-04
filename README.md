@@ -32,7 +32,7 @@ debug("log text"):
 // => Output to console: "log text"
 ```
 
-:bulb: Tips:
+**Tips** :bulb:
 
 `@deps/debug` also provide `debug` function as `debugLog`.
 `debugLog` is a just alias to `debug` function.
