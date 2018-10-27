@@ -5,6 +5,7 @@ Simple debug logger for Browser and Node.js.
 ## Features
 
 - Provide a single `debug` function
+- Add caller's file name as prefix to log using [StackTracey](https://github.com/xpl/stacktracey)
 - Support TypeScript
 - Support ES modules `import`
 - Support Browser and Node.js
@@ -45,8 +46,6 @@ import { debugLog } from "@deps/debug";
 debugLog("log text"):
 // => Output to console: "log text"
 ```
-
-
 
 ## Enable **DEBUG MODE**
 
