@@ -1,9 +1,25 @@
 import { createDebug } from "../src/DebugLogger";
 import * as assert from "assert";
 import { DEBUG_CONTROLLER } from "../src/debug";
+import { fileShortPrefixer } from "../src/node-prefixer";
 
 const makeConsoleMock = require("consolemock");
 describe("debug", function() {
+    it("should output all to console when namspaces is *", () => {
+        const consoleMock = makeConsoleMock();
+        const debug = createDebug({
+            namespaces: "*/debug-test.ts",
+            console: consoleMock,
+            prefixer: fileShortPrefixer
+        });
+        debug("a", "b", "c");
+        debug(1, 2, 3);
+        debug();
+        const [abc, num, empty] = consoleMock.history();
+        assert.deepStrictEqual(abc.LOG, ["test/debug-test.ts", "a", "b", "c"]);
+        assert.deepStrictEqual(num.LOG, ["test/debug-test.ts", 1, 2, 3]);
+        assert.deepStrictEqual(empty.LOG, ["test/debug-test.ts", undefined]);
+    });
     it("should output all to console when namspaces is *", () => {
         const consoleMock = makeConsoleMock();
         const debug = createDebug({
@@ -27,7 +43,7 @@ describe("debug", function() {
         debug("test", "text");
         debug("no matched");
         debug();
-        assert.equal(consoleMock.history().length, 1);
+        assert.strictEqual(consoleMock.history().length, 1);
         const [matched] = consoleMock.history();
         assert.deepStrictEqual(matched.LOG, ["test", "text"]);
     });

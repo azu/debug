@@ -72,13 +72,16 @@ DEBUG=-prefix:*
 DEBUG=-p1,p2,p3
 ```
 
-When you specify `DEBUG=prefix:*`, this library output log that is started with `prefix:`. 
+**Notes**: Node.js add **file name** as prefix automatically.
+
+When you specify `DEBUG=*/your-file.js`, this library output log that file name is `your-file.js`.
 
 ```ts
+// src/your-file.js
 import { debug } from "@deps/debug";
 
-debug("prefix:", "log text"):
-// => "prefix: log text"
+debug("log text"):
+// => "src/your-file.js: log text"
 debug("log text");
 // => No output
 ```

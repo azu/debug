@@ -3,6 +3,7 @@ import { global_debug_status } from "./DebugController";
 export interface DebugOptions {
     console?: Console;
     namespaces?: string | null;
+    prefixer?: () => string | undefined;
 }
 
 
@@ -68,9 +69,14 @@ export function createDebug(options: DebugOptions): (message?: any, ...optionalP
         if (global_debug_status === "ng") {
             return;
         }
-        if (!allowOutputConsole(message, allowNameList, denyNameList)) {
+        const prefix = options.prefixer ? options.prefixer() : undefined;
+        if (!allowOutputConsole(prefix || message, allowNameList, denyNameList)) {
             return;
         }
-        console.log(message, ...optionalParams);
+        if (prefix) {
+            console.log(prefix, message, ...optionalParams);
+        } else {
+            console.log(message, ...optionalParams);
+        }
     };
 }

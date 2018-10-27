@@ -16,6 +16,10 @@
   version "10.11.4"
   resolved "https://registry.npmjs.org/@types/node/-/node-10.11.4.tgz#e8bd933c3f78795d580ae41d86590bfc1f4f389d"
 
+"@types/node@^8.0.7":
+  version "8.10.36"
+  resolved "https://registry.npmjs.org/@types/node/-/node-8.10.36.tgz#eac05d576fbcd0b4ea3c912dc58c20475c08d9e4"
+
 ansi-escapes@^1.0.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
@@ -67,6 +71,12 @@ array-unique@^0.3.2:
 arrify@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
+
+as-table@^1.0.31:
+  version "1.0.36"
+  resolved "https://registry.npmjs.org/as-table/-/as-table-1.0.36.tgz#e38f5c85e184cd7f6efe2885d8dbc80c2b731ec4"
+  dependencies:
+    printable-characters "^1.0.37"
 
 assign-symbols@^1.0.0:
   version "1.0.0"
@@ -264,6 +274,12 @@ cross-spawn@^6.0.5:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
+data-uri-to-buffer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/data-uri-to-buffer/-/data-uri-to-buffer-2.0.0.tgz#0ba23671727349828c32cfafddea411908d13d23"
+  dependencies:
+    "@types/node" "^8.0.7"
+
 date-fns@^1.27.2:
   version "1.29.0"
   resolved "https://registry.npmjs.org/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
@@ -432,6 +448,13 @@ fs.realpath@^1.0.0:
 get-own-enumerable-property-symbols@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/get-own-enumerable-property-symbols/-/get-own-enumerable-property-symbols-2.0.1.tgz#5c4ad87f2834c4b9b4e84549dc1e0650fb38c24b"
+
+get-source@^1.0.24:
+  version "1.0.27"
+  resolved "https://registry.npmjs.org/get-source/-/get-source-1.0.27.tgz#b92f8b5d61607ab81826eb22edd7dea1f48708d9"
+  dependencies:
+    data-uri-to-buffer "^2.0.0"
+    source-map "^0.6.0"
 
 get-stdin@^6.0.0:
   version "6.0.0"
@@ -1115,6 +1138,10 @@ pretty-format@^23.6.0:
     ansi-regex "^3.0.0"
     ansi-styles "^3.2.0"
 
+printable-characters@^1.0.37:
+  version "1.0.42"
+  resolved "https://registry.npmjs.org/printable-characters/-/printable-characters-1.0.42.tgz#3f18e977a9bd8eb37fcc4ff5659d7be90868b3d8"
+
 pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
@@ -1322,6 +1349,13 @@ split-string@^3.0.1, split-string@^3.0.2:
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
+
+stacktracey@^1.2.106:
+  version "1.2.106"
+  resolved "https://registry.npmjs.org/stacktracey/-/stacktracey-1.2.106.tgz#c670ec3e70c4b348f14a4c1003aa44c7c497e362"
+  dependencies:
+    as-table "^1.0.31"
+    get-source "^1.0.24"
 
 staged-git-files@1.1.1:
   version "1.1.1"
